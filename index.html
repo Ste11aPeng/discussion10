@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript">
+        function displayInformation() {
+            // Your code goes here. 
+            // Do not change any other code in this file
+            // All of the steps below must be achieved using JavaScript!
+
+
+            // 1. Change the h1 element to your name.
+            document.querySelector('h1').textContent = 'Stella';
+
+            // 2. Update the three span elements using ONLY JavaScript
+            // The URL of this page is: <span id="URL"></span><br />
+            // The number of H2 items for this page: <span id="items"></span><br />
+            // The current date/time is: <span id="time"></span><br />
+            document.querySelector('#URL').innerHTML = window.location.href;
+            document.querySelector('#items').innerHTML = document.querySelectorAll('h2').length.toString();
+            document.querySelector('#time').innerHTML = new Date().toLocaleDateString("de-DE");
+
+
+            // 3. Change the background color and margin for the entire page.
+            document.body.style.backgroundColor = '#FA8072';
+            document.body.style.margin = '20px';
+
+        }
+
+        // 4. If someone uses the keyboard shortcut to copy the words "Thank you for visiting!" then add the words "Go Blue" to the final div.  
+        // Each occurrence should be on a separate line.  Don't use
+        // paragraphs. 
+        document.shortcutDetector('copy', function () {
+            const text = window.getSelection().toString();
+            if (text.includes("Thank you for visiting!")) {
+                const finalDiv = document.querySelector('div:last-of-type');
+                finalDiv.textContent += "\nGo Blue"; // Appends "Go Blue" on a new line
+            }
+        });
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <a class=" skip-to-content-link" href="#main">Skip to Main Content</a>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="pets.html">Pets</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="travel.html">Travel</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to our website!</h1>
+
+    </header>
+    <main id="main">
+        <div>
+            <h2>Use JavaScript to display the following information here:</h2>
+            <p>
+                The URL of this page is: <span id="URL"></span><br />
+                The number of H2 items for this page: <span id="items"></span><br />
+                The current date/time is: <span id="time"></span><br />
+            </p>
+
+            <p oncopy="copyFunction()">Thank you for visiting!</p>
+
+
+            <div id="cheer"></div>
+        </div>
+
+        <div class="container_home">
+            <div class="home-body">
+                <p>
+                    Welcome to our vibrant community where pet, recipe, and travel enthusiasts unite! Discover curated
+                    pet
+                    recipes for happy, healthy pets, and explore travel experiences, tips, and hidden gems worldwide.
+                    Connect, exchange ideas, and build friendships with like-minded individuals who share your passions.
+                    Join us to create lasting memories and forge new connections!
+                </p>
+                <img src="images/Sprout_toy.JPG" width="200"
+                    alt="He likes to share his favorite toy with me, carrying it and offering it to me."></img>
+                <a href="pets.html" class="btn">Go check fluffy friends &#62;</a>
+                <img src="images/Shanghai-Tower.jpg" width="400px"
+                    alt="A large spring with clouds of sulfur smoke rising from it.">
+                <a href="travel.html" class="btn">Go travel-adventuring &#62;</a>
+                <img src="images/double_chocolate_cookies.png" width="400px" alt="A small pile of chocolate chips">
+                <a href="recipes.html" class="btn">Go cooking &#62;</a>
+
+            </div>
+        </div>
+        <div class="intro">Join us in this unique blend of pet-loving, recipe-sharing, and travel-adventuring
+            community. Let's
+            create
+            a space where every tail wag, every recipe shared, and every journey embarked upon brings us closer
+            together.
+        </div>
+    </main>
+
+</body>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Stella Peng's project. All rights reserved.</p>
+        <p>Contact us at ruocaan@umich.com</p>
+        <p>Follow us on Twitter, Facebook, Instagram</p>
+    </div>
+</footer>
+
+</html>

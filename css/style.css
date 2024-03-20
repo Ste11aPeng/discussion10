@@ -1,0 +1,439 @@
+/* in discussion */
+.grid-photo {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+img {
+    object-fit: cover;
+}
+
+.grid-photo-travel {
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+}
+
+.grid-photo-food {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.aside .aside-food {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 这是一些字体啥的还有默认值 */
+body {
+    font-family: montserrat, Arial, Helvetica, sans-serif;
+    color: #363636;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Style the h1 and h2 elements */
+h1,
+h2,
+h3 {
+    display: block;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+h1 {
+    color: #9E2A2B;
+    padding: 30px;
+    font-family: montserrat, sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #DEDBD2;
+    text-shadow: 2px 2px 4px rgba(88, 169, 122, 0.314);
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+h3 {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    color: #DEDBD2;
+    background-color: #4A5759;
+    border-radius: 3em;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #9E2A2B;
+    opacity: 0.9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 9999;
+}
+
+.floating-btn:hover {
+    background-color: #B0C4B1;
+    opacity: 1;
+}
+
+/* 隐藏界面 */
+.skip-to-content-link {
+    position: absolute;
+    top: -40px;
+    transform: translateX(-50%, -50%);
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.skip-to-content-link:focus {
+    position: static;
+    top: 20px;
+    width: auto;
+    height: auto;
+}
+
+/* 我们亲爱的navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #4A5759;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: max-height 1s ease, visibility 1s ease;
+
+}
+
+.navbar a {
+    float: left;
+    color: #DEDBD2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fdf1d6;
+    text-shadow: 1px 1px #8d784a;
+}
+
+.navbar ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+    display: flex;
+    max-width: 100%;
+    flex: 1;
+    flex-direction: column;
+
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a.active {
+    background-color: #DEDBD2;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: left;
+    text-decoration: underline;
+}
+
+
+/*这里是主要内容 */
+
+.container {
+    background-color: #DEDBD2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+.aside,
+section {
+    overflow: auto;
+}
+
+.aside:focus,
+section:focus {
+    outline: none;
+
+}
+
+.aside::-webkit-scrollbar,
+section::-webkit-scrollbar {
+    width: 12px;
+
+}
+
+.aside::-webkit-scrollbar-thumb,
+section::-webkit-scrollbar-thumb {
+    background-color: #888;
+
+}
+
+
+/* section's layout rules */
+section {
+    background-color: #B0C4B1;
+}
+
+section img {
+    display: block;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+section p {
+    width: 70%;
+    margin: 50px auto;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* aside's layout rules */
+.aside {
+    height: 90vh;
+}
+
+.aside-food ol {
+    list-style-type: decimal-leading-zero;
+    padding-left: 20px;
+}
+
+.aside-food li {
+    margin-bottom: 5px;
+}
+
+
+.aside img,
+.aside video {
+    margin: 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* class setting rules */
+.home-body img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 1.5em;
+}
+
+.container_home {
+    background-color: #DEDBD2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 10px;
+    max-width: 250px;
+    background-color: #9E2A2B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4A5759;
+}
+
+.intro {
+    text-align: center;
+    color: #4A5759;
+    font-size: small;
+    padding: 0% 10% 0 10%;
+    background-color: #DEDBD2;
+}
+
+.ingredients {
+    list-style-type: decimal-leading-zero;
+    text-align: left;
+    padding-left: 30%;
+    margin-bottom: 30px;
+}
+
+.ingredients li {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.likes {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.likes li {
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.likes li::before {
+    content: "\2665";
+    color: #F7E1D7;
+
+}
+
+.gallery-header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+
+/* footer */
+footer {
+    border-top: 2px solid rgba(180, 180, 180, 0.53);
+    background-color: #DEDBD2;
+    color: #4A5759;
+    font-size: x-small;
+    text-align: center;
+    padding: 20px 0;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        transform-origin: top;
+        padding: 0px 80px;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .navbar li {
+        display: inline-block;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        text-align: left;
+        min-width: 100%;
+        display: block;
+    }
+
+    h1 {
+        padding-top: 80px;
+    }
+
+    .container_home {
+        background-color: #DEDBD2;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 30px;
+        padding-top: 0px;
+    }
+
+    .home-body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        row-gap: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .home-body p {
+        grid-column: 1 / -1;
+
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .home-body img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .home-body img:nth-child(2n) {
+        grid-row: 2 / span 2;
+    }
+
+    .home-body .btn {
+        justify-self: center;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .container {
+        justify-content: center;
+        grid-template-columns: 3fr 2fr;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .grid-photo {
+        max-width: 90vh;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+}
